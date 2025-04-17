@@ -14,7 +14,7 @@ function ExpenseItem({ expense, getCategoryName, onEdit, onDelete }: ExpenseItem
     <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg group">
       <div className="flex items-center space-x-4">
         <div className="p-2 bg-blue-100 rounded-lg">
-          <DollarSign className="w-5 h-5 text-blue-600" />
+          <span className="w-5 h-5 text-blue-600" >£</span>
         </div>
         <div>
           <p className="font-medium text-gray-800">{expense.description}</p>
