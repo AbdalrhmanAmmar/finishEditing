@@ -180,8 +180,8 @@ const Goals = () => {
                 {/* Progress Bar */}
                 <div className="mb-4">
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="font-medium">${goal.currentAmount.toLocaleString()}</span>
-                    <span className="text-gray-500">of ${goal.targetAmount.toLocaleString()}</span>
+                    <span className="font-medium">£{goal.currentAmount.toLocaleString()}</span>
+                    <span className="text-gray-500">of £{goal.targetAmount.toLocaleString()}</span>
                   </div>
                   <div className="w-full bg-gray-100 rounded-full h-2.5">
                     <div
@@ -202,7 +202,7 @@ const Goals = () => {
                   <div className="flex items-center text-sm">
                     <DollarSign className="w-4 h-4 text-gray-400 mr-2" />
                     <span className="text-gray-600">
-                      ${monthlyTarget.toFixed(2)} monthly target
+                    £{monthlyTarget.toFixed(2)} monthly target
                     </span>
                   </div>
                 </div>

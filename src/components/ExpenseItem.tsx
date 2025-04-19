@@ -23,7 +23,7 @@ function ExpenseItem({ expense, getCategoryName, onEdit, onDelete }: ExpenseItem
       </div>
       <div className="flex items-center space-x-4">
         <div className="text-right">
-          <p className="font-semibold text-gray-800">${expense.amount.toFixed(2)}</p>
+          <p className="font-semibold text-gray-800">£{expense.amount.toFixed(2)}</p>
           <p className="text-sm text-gray-500">{new Date(expense.date).toLocaleDateString()}</p>
         </div>
         <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">

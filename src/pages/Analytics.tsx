@@ -238,7 +238,7 @@ const Analytics = () => {
                   y: {
                     beginAtZero: true,
                     ticks: {
-                      callback: (value) => `$${value}`,
+                      callback: (value) => `£${value}`,
                     },
                   },
                 },
@@ -264,7 +264,7 @@ const Analytics = () => {
                         const value = context.raw as number;
                         const total = (context.dataset.data as number[]).reduce((a, b) => a + b, 0);
                         const percentage = ((value / total) * 100).toFixed(1);
-                        return `$${value.toFixed(2)} (${percentage}%)`;
+                        return `£${value.toFixed(2)} (£{percentage}%)`;
                       },
                     },
                   },
@@ -286,7 +286,7 @@ const Analytics = () => {
                   y: {
                     beginAtZero: true,
                     ticks: {
-                      callback: (value) => `$${value}`,
+                      callback: (value) => `£${value}`,
                     },
                   },
                 },
@@ -302,7 +302,7 @@ const Analytics = () => {
             <div className="p-4 bg-blue-50 rounded-lg">
               <p className="text-sm font-medium text-blue-800">Highest Expense Category</p>
               <p className="mt-1 text-2xl font-semibold text-blue-900">{insights.highestCategory.name}</p>
-              <p className="mt-1 text-sm text-blue-700">${insights.highestCategory.amount.toFixed(2)}</p>
+              <p className="mt-1 text-sm text-blue-700">£{insights.highestCategory.amount.toFixed(2)}</p>
             </div>
             <div className="p-4 bg-green-50 rounded-lg">
               <p className="text-sm font-medium text-green-800">Monthly Change</p>
@@ -313,7 +313,7 @@ const Analytics = () => {
             </div>
             <div className="p-4 bg-purple-50 rounded-lg">
               <p className="text-sm font-medium text-purple-800">Total Spending</p>
-              <p className="mt-1 text-2xl font-semibold text-purple-900">${insights.totalSpending.toFixed(2)}</p>
+              <p className="mt-1 text-2xl font-semibold text-purple-900">£{insights.totalSpending.toFixed(2)}</p>
               <p className="mt-1 text-sm text-purple-700">All time</p>
             </div>
           </div>
